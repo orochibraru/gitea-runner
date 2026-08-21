@@ -1,0 +1,19 @@
+services:
+  runner:
+    image: docker.io/gitea/runner:3
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - CONFIG_FILE=/config.yaml
+      - GITEA_INSTANCE_URL=${INSTANCE_URL:?}
+      - GITEA_RUNNER_REGISTRATION_TOKEN=${REGISTRATION_TOKEN:?}
+      - GITEA_RUNNER_NAME=${RUNNER_NAME:?}
+      - GITEA_RUNNER_LABELS=${RUNNER_LABELS:?}
+    volumes:
+      - ./config.yaml:/config.yaml
+      - runner_cache:/root/.cache
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  runner_cache:
+  runner_data:
