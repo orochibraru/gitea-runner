@@ -41,6 +41,9 @@ runner:
     - "ubuntu-latest:docker://gitea/runner-images:ubuntu-latest"
     - "ubuntu-24.04:docker://gitea/runner-images:ubuntu-24.04"
     - "ubuntu-22.04:docker://gitea/runner-images:ubuntu-22.04"
+    - "amd64:docker://gitea/runner-images:ubuntu-latest"
+    - "dind:docker://gitea/runner-images:ubuntu-latest"
+    - "docker-builder:docker://gitea/runner-images:ubuntu-latest"
 
 cache:
   # Enable cache server to use actions/cache.
