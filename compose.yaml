@@ -8,6 +8,8 @@ services:
       - GITEA_INSTANCE_URL=${INSTANCE_URL:?}
       - GITEA_RUNNER_REGISTRATION_TOKEN=${REGISTRATION_TOKEN:?}
       - GITEA_RUNNER_NAME=${RUNNER_NAME:?}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:?}
+      - GH_TOKEN=${GH_TOKEN:?}
     volumes:
       - ./config.yaml:/config.yaml
       - runner_cache:/root/.cache
