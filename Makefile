@@ -1,2 +1,2 @@
 arm:
-	sed -i '' 's/amd64/arm64/g' config.yaml
+	sed -i 's/amd64/arm64/g' config.yaml
