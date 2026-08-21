@@ -13,9 +13,9 @@ runner:
   # Execute how many tasks concurrently at the same time.
   capacity: 8
   # Extra environment variables to run jobs.
-  # envs:
-  #   A_TEST_ENV_NAME_1: a_test_env_value_1
-  #   A_TEST_ENV_NAME_2: a_test_env_value_2
+  envs:
+    GITHUB_TOKEN: "" # Passing empty string forces act_runner to inherit GITHUB_TOKEN from the runner host/container process
+    GH_TOKEN: ""
   # Extra environment variables to run jobs from a file.
   # It will be ignored if it's empty or the file doesn't exist.
   env_file: .env
